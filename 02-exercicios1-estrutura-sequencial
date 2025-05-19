@@ -1,0 +1,127 @@
+Exercício 01 - Soma de dois números
+import java.util.Scanner;
+
+public class Exercicio01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int soma = a + b;
+
+        System.out.println("SOMA = " + soma);
+        
+        sc.close();
+    }
+}
+
+
+Exercício 02 - Área do círculo
+import java.util.Scanner;
+
+public class Exercicio02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double raio = sc.nextDouble();
+        double area = 3.14159 * raio * raio;
+
+        System.out.printf("A=%.4f%n", area);
+        
+        sc.close();
+    }
+}
+
+
+Exercício 03 - Diferença de produtos
+import java.util.Scanner;
+
+public class Exercicio03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        
+        int diferenca = (a * b - c * d);
+        
+        System.out.println("DIFERENCA = " + diferenca);
+        
+        sc.close();
+    }
+}
+
+
+Exercício 04 - Salário do funcionário
+import java.util.Scanner;
+
+public class Exercicio04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int numero = sc.nextInt();
+        int horas = sc.nextInt();
+        double valorHora = sc.nextDouble();
+        
+        double salario = horas * valorHora;
+        
+        System.out.println("NUMBER = " + numero);
+        System.out.printf("SALARY = U$ %.2f%n", salario);
+        
+        sc.close();
+    }
+}
+
+
+Exercício 05 - Valor total a pagar
+import java.util.Scanner;
+
+public class Exercicio05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int cod1 = sc.nextInt();
+        int qtd1 = sc.nextInt();
+        double valor1 = sc.nextDouble();
+
+        int cod2 = sc.nextInt();
+        int qtd2 = sc.nextInt();
+        double valor2 = sc.nextDouble();
+
+        double total = qtd1 * valor1 + qtd2 * valor2;
+        
+        System.out.printf("VALOR A PAGAR: R$ %.2f%n", total);
+        
+        sc.close();
+    }
+}
+
+
+Exercício 06 - Cálculos de áreas geométricas
+import java.util.Scanner;
+
+public class Exercicio06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
+        double c = sc.nextDouble();
+        
+        double triangulo = (a * c) / 2.0;
+        double circulo = 3.14159 * c * c;
+        double trapezio = (a + b) * c / 2.0;
+        double quadrado = b * b;
+        double retangulo = a * b;
+        
+        System.out.printf("TRIANGULO: %.3f%n", triangulo);
+        System.out.printf("CIRCULO: %.3f%n", circulo);
+        System.out.printf("TRAPEZIO: %.3f%n", trapezio);
+        System.out.printf("QUADRADO: %.3f%n", quadrado);
+        System.out.printf("RETANGULO: %.3f%n", retangulo);
+        
+        sc.close();
+    }
+}
