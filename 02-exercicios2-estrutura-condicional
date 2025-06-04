@@ -1,0 +1,180 @@
+Exercício 01 – Negativo ou Não
+
+import java.util.Scanner;
+
+public class Exercicio01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero = sc.nextInt();
+        if (numero < 0) {
+            System.out.println("NEGATIVO");
+        } else {
+            System.out.println("NAO NEGATIVO");
+        }
+        sc.close();
+    }
+}
+
+Exercício 02 – Par ou Ímpar
+
+import java.util.Scanner;
+
+public class Exercicio02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero = sc.nextInt();
+        if (numero % 2 == 0) {
+            System.out.println("PAR");
+        } else {
+            System.out.println("IMPAR");
+        }
+        sc.close();
+    }
+}
+
+Exercício 03 – Múltiplos
+
+import java.util.Scanner;
+
+public class Exercicio03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if (a % b == 0 || b % a == 0) {
+            System.out.println("Sao Multiplos");
+        } else {
+            System.out.println("Nao sao Multiplos");
+        }
+        sc.close();
+    }
+}
+
+Exercício 04 – Duração do Jogo
+
+import java.util.Scanner;
+
+public class Exercicio04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int inicio = sc.nextInt();
+        int fim = sc.nextInt();
+
+        int duracao;
+        if (inicio < fim) {
+            duracao = fim - inicio;
+        } else {
+            duracao = 24 - inicio + fim;
+        }
+
+        System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+        sc.close();
+    }
+}
+
+Exercício 05 – Conta a Pagar
+
+import java.util.Scanner;
+
+public class Exercicio05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int codigo = sc.nextInt();
+        int quantidade = sc.nextInt();
+        double total = 0.0;
+
+        if (codigo == 1) total = quantidade * 4.00;
+        else if (codigo == 2) total = quantidade * 4.50;
+        else if (codigo == 3) total = quantidade * 5.00;
+        else if (codigo == 4) total = quantidade * 2.00;
+        else if (codigo == 5) total = quantidade * 1.50;
+
+        System.out.printf("Total: R$ %.2f%n", total);
+        sc.close();
+    }
+}
+
+ Exercício 06 – Intervalos
+
+import java.util.Scanner;
+
+public class Exercicio06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double valor = sc.nextDouble();
+
+        if (valor >= 0 && valor <= 25) {
+            System.out.println("Intervalo [0,25]");
+        } else if (valor > 25 && valor <= 50) {
+            System.out.println("Intervalo (25,50]");
+        } else if (valor > 50 && valor <= 75) {
+            System.out.println("Intervalo (50,75]");
+        } else if (valor > 75 && valor <= 100) {
+            System.out.println("Intervalo (75,100]");
+        } else {
+            System.out.println("Fora de intervalo");
+        }
+        sc.close();
+    }
+}
+
+ Exercício 07 – Quadrante
+
+import java.util.Scanner;
+
+public class Exercicio07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double x = sc.nextDouble();
+        double y = sc.nextDouble();
+
+        if (x == 0 && y == 0) {
+            System.out.println("Origem");
+        } else if (x == 0) {
+            System.out.println("Eixo Y");
+        } else if (y == 0) {
+            System.out.println("Eixo X");
+        } else if (x > 0 && y > 0) {
+            System.out.println("Q1");
+        } else if (x < 0 && y > 0) {
+            System.out.println("Q2");
+        } else if (x < 0 && y < 0) {
+            System.out.println("Q3");
+        } else {
+            System.out.println("Q4");
+        }
+
+        sc.close();
+    }
+}
+
+Exercício 08 – Imposto de Renda
+
+import java.util.Scanner;
+
+public class Exercicio08 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double salario = sc.nextDouble();
+        double imposto = 0.0;
+
+        if (salario <= 2000.00) {
+            imposto = 0.0;
+        } else if (salario <= 3000.00) {
+            imposto = (salario - 2000.00) * 0.08;
+        } else if (salario <= 4500.00) {
+            imposto = (1000.00 * 0.08) + (salario - 3000.00) * 0.18;
+        } else {
+            imposto = (1000.00 * 0.08) + (1500.00 * 0.18) + (salario - 4500.00) * 0.28;
+        }
+
+        if (imposto == 0.0) {
+            System.out.println("Isento");
+        } else {
+            System.out.printf("R$ %.2f%n", imposto);
+        }
+
+        sc.close();
+    }
+}
